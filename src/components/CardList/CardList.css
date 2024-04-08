@@ -1,0 +1,45 @@
+.content {
+  overflow: hidden;
+}
+
+.cards {
+  position: relative;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 339px);
+	gap: 60px;
+	margin: 0 auto;
+	justify-content: center;
+	padding: 129px 20px calc(100vh - 951px + 129px) 20px;
+  max-width: 1536px;
+  list-style: none;
+  background: url("../../images/rectangle.svg") no-repeat center;
+}
+
+@media screen and (max-width: 1575px) {
+  .cards {
+    padding: 100px 20px;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .cards::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--scroll-progress, 0) * 100%);
+    left: 0;
+    width: 934.81px;
+    height: 300px;
+    background-color: #7075F1;
+    animation: rotate 5s linear infinite;
+    border-radius: 300px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

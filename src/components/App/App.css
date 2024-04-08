@@ -1,0 +1,20 @@
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/fonts/font.css);
+
+.body {
+  background-color: #D4D4D4;
+}
+
+@media screen and (max-width: 1280px) {
+  .body {
+    display: block;
+  }
+}
+
+.page {
+  max-width: 1920px;
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
